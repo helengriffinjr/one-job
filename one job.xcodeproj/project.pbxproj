@@ -29,9 +29,46 @@
 		C0D751312D92F55A00ADD902 /* one jobUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "one jobUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C054E6312D957D0E00005092 /* Exceptions for "one job" folder in "one jobTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AlertView.swift,
+				ChartsView.swift,
+				CheckInView.swift,
+				DeadlineView.swift,
+				NotifyView.swift,
+				ProgressView.swift,
+				TaskView.swift,
+				VisionView.swift,
+				WidgetView.swift,
+			);
+			target = C0D751262D92F55A00ADD902 /* one jobTests */;
+		};
+		C054E6322D957D0E00005092 /* Exceptions for "one job" folder in "one jobUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AlertView.swift,
+				ChartsView.swift,
+				CheckInView.swift,
+				DeadlineView.swift,
+				NotifyView.swift,
+				ProgressView.swift,
+				TaskView.swift,
+				VisionView.swift,
+				WidgetView.swift,
+			);
+			target = C0D751302D92F55A00ADD902 /* one jobUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C0D751182D92F55800ADD902 /* one job */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C054E6312D957D0E00005092 /* Exceptions for "one job" folder in "one jobTests" target */,
+				C054E6322D957D0E00005092 /* Exceptions for "one job" folder in "one jobUITests" target */,
+			);
 			path = "one job";
 			sourceTree = "<group>";
 		};
