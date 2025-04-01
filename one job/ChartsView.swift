@@ -28,7 +28,7 @@ var data: [ToyShape] = [
     ToyShape(color: "Orange", type: "Sphere", count: 4),
     ToyShape(color: "Yellow", type: "Circle", count: 9),
     ToyShape(color: "Green", type: "Pyramid", count: 4),
-    ToyShape(color: "Blue", type: "Square", count: 2),
+    ToyShape(color: "Blue", type: "Square", count: 25),
     ToyShape(color: "Indigo", type: "Triangle", count: 40),
     ToyShape(color: "Violet", type: "Star", count: 13)
 ]

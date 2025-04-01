@@ -12,6 +12,12 @@ import Charts
 var timestamp = Date.now
 
 struct ProgressView: View {
+//    @EnvironmentObject var profile: Profile
+    
+    @ObservedObject var profile = Profile()
+    
+    
+    
     var body: some View {
         
         VStack {
@@ -21,18 +27,22 @@ struct ProgressView: View {
             Text("Your daily breakdown of your hardwork and investment.")
             HStack {
                 //chart
+                
+                
                 Chart() {
-                    ForEach(data, id: \.id) { shape in
-                        SectorMark(
-                            angle: .value("Count", shape.count),
-                            innerRadius: .ratio(0.55),
-                            angularInset: 1.0
-                        )
-                        .foregroundStyle(shape.palette[shape.color] ?? .gray)
-                        .annotation(position: .overlay){
-                            Text(shape.count, format: .percent)
-                                .font(.caption)
-                                .foregroundStyle(.white)
+                    ForEach(breakdown, id: \.id) { task in
+                        if task.totalHours != 0 {
+                            SectorMark(
+                                angle: .value("Task", task.totalHours),
+                                innerRadius: .ratio(0.55),
+                                angularInset: 1.0
+                            )
+                            .foregroundStyle(task.palette[task.color] ?? .gray)
+                            .annotation(position: .overlay){
+                                Text(task.totalHours, format: .percent)
+                                    .font(.caption)
+                                    .foregroundStyle(.white)
+                            }
                         }
                     }
                 }
@@ -49,6 +59,12 @@ struct ProgressView: View {
                         .font(.title2).bold() + Text(timestamp, format: .dateTime.month().day().hour().minute())
                         .font(.title2).bold()
                     //category list
+//                    Group {
+//                        ForEach(breakdown.sorted(by: { $0.key < $1.key }), id: \.value.id) { pair in
+//                            let item = pair.value
+//                            Text("\(item.totalHours)% \(item.task)")
+//                        }
+//                    }
                 }
             }
 //            HStack {
