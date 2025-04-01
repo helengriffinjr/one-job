@@ -12,6 +12,7 @@ struct one_jobApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(Profile())
         }
     }
 }
